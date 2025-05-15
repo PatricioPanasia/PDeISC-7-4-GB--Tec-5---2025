@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body class="formulario-container">
+  <div class="formulario-wrapper">
+    <h1 class="formulario-title">DEPORTES</h1>
+    <p class="formulario-parrafo">A menudo se habla que es sano entrenar, pero ¿Es esto realmente cierto?</p>      
+
+    <form class="formulario-form">
+      <label class="formulario-label" for="nombre">¿Cuál es tu nombre?</label>
+      <input class="formulario-input" type="text" id="nombre" name="nombre" required />
+
+      <label class="formulario-label" for="deporte">¿Realizaste algún deporte? Si es así, ¿cuál fue?</label>
+      <input class="formulario-input" type="text" id="deporte" name="deporte" required />
+
+      <label class="formulario-label" for="tiempo">¿Cuánto tiempo lo realizaste?</label>
+      <input class="formulario-input" type="text" id="tiempo" name="tiempo" required />
+
+      <label class="formulario-label" for="sensacion">¿Te sentías mejor o peor después de hacerlo?</label>
+      <input class="formulario-input" type="text" id="sensacion" name="sensacion" required />
+
+      <button class="formulario-btn-ingresar" type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <button class="formulario-btn-volver" onclick="irAPagina('/')">Volver</button>
+  </div>
+</body>
+</html>
