@@ -6,13 +6,16 @@
   <title>Inicio | Juegos Web</title>
   <link rel="stylesheet" href="/css/index.css" />
 </head>
-<body class="fondo-index">
+<body>
   <main class="contenedor-index">
     <h1 class="titulo-index">Bienvenido a Juegos Web</h1>
     <p class="descripcion-index">Selecciona un juego para comenzar:</p>
+
     <button class="boton-index" onclick="window.location.href='game.html'">Piedra, Papel o Tijera</button>
-    <button class="boton-index" onclick="window.location.href='simon.html'">Simón dice</button>
-    <button class="boton-index" onclick="window.location.href='tateti.html'">TaTeTi</button>
+    <button class="boton-index" onclick="selectGameMode('simon')">Simón dice</button>
+    <button class="boton-index" onclick="selectGameMode('tateti')">TaTeTi</button>
   </main>
+
+  <script src="js/common.js"></script>
 </body>
 </html>

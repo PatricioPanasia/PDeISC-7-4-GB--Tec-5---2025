@@ -187,3 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+window.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('player1') || !localStorage.getItem('player2')) {
+        selectGameMode('tateti'); // cambiar según el juego: 'simon', 'ppt', etc.
+    } else {
+        displayPlayerInfo();
+    }
+});

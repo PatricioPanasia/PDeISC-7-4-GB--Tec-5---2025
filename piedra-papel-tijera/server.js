@@ -106,5 +106,5 @@ io.on('connection', sock => {
 });
 
 server.listen(3000, () => {
-  console.log('En http://localhost:3000/game.html');
+  console.log('En http://localhost:3000/');
 });
