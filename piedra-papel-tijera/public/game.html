@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra, Papel o Tijera</title>
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+  <h1>Piedra, Papel o Tijera</h1>
+
+  <form id="form-inicio">
+    <input id="input-nombre" type="text" placeholder="Tu nombre" required>
+    <select id="modo-juego">
+      <option value="cpu">Contra la CPU</option>
+      <option value="online">Multijugador Online</option>
+    </select>
+    <div id="grupo-sala" class="oculto">
+      <input id="input-sala" type="text" placeholder="Nombre de sala (opcional)">
+    </div>
+    <button type="submit">Iniciar Partida</button>
+  </form>
+
+  <div id="info-jugadores"></div>
+  <div id="turno"></div>
+
+  <div id="opciones-juego" class="oculto">
+    <button class="btn-jugada" data-eleccion="piedra">🪨 Piedra</button>
+    <button class="btn-jugada" data-eleccion="papel">📄 Papel</button>
+    <button class="btn-jugada" data-eleccion="tijera">✂️ Tijera</button>
+  </div>
+
+  <div id="controles-online" class="oculto">
+    <button id="btn-rendirse">Rendirse</button>
+  </div>
+
+  <div id="resultado"></div>
+  <div id="score"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
