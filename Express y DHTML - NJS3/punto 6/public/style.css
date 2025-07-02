@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00c8a0;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #ccc;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+  accent-color: #00c8a0;
+}
+
+fieldset {
+  border: 1px solid #333;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+legend {
+  padding: 0 10px;
+  color: #00c8a0;
+}
+
+button {
+  background-color: #00a86b;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #008c58;
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #252525;
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+
+#resultado h2 {
+  margin-bottom: 1rem;
+  color: #00c8a0;
+}
+
+#resultado p {
+  margin-bottom: 0.5rem;
+}
+
+/* Evitar cambios de color automáticos en los inputs */
+input:valid,
+input:focus:valid,
+select:valid {
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Evitar autofill amarillo de Chrome */
+input:-webkit-autofill {
+  background-color: #2b2b2b !important;
+  color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select,
+  button {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

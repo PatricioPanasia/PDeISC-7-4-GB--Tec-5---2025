@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Enlaces</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Gestor de Enlaces Personalizados</h1>
+
+  <section class="formulario">
+    <input id="linkName" type="text" placeholder="Texto del enlace" />
+    <input id="linkHref" type="text" placeholder="URL del enlace" />
+    <button onclick="crearEnlace()">Crear enlace</button>
+  </section>
+
+  <h2>Enlaces Creados:</h2>
+  <div id="listaEnlaces"></div>
+
+  <h2>Modificar Enlace:</h2>
+  <section class="formulario">
+    <select id="enlaceSelector"></select>
+    <input id="nuevoTexto" type="text" placeholder="Nuevo texto" />
+    <input id="nuevaHref" type="text" placeholder="Nueva URL" />
+    <button onclick="modificarEnlace()">Modificar</button>
+  </section>
+
+  <h3>Cambios Realizados:</h3>
+  <ul id="registroCambios"></ul>
+
+  <script src="/script.js"></script>
+</body>
+</html>

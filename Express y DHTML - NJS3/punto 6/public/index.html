@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Usuario</h1>
+
+    <form id="formulario">
+      <input type="text" name="nombre" placeholder="Nombre" required />
+      <input type="text" name="apellido" placeholder="Apellido" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="number" name="edad" placeholder="Edad" required />
+
+      <div class="grupo">
+        <label>Género:</label>
+        <label><input type="radio" name="genero" value="Masculino" required /> Masculino</label>
+        <label><input type="radio" name="genero" value="Femenino" required /> Femenino</label>
+        <label><input type="radio" name="genero" value="Otro" required /> Otro</label>
+      </div>
+
+      <div class="grupo">
+        <label for="pais">País:</label>
+        <select name="pais" id="pais" required>
+          <option value="">Seleccionar</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Chile">Chile</option>
+          <option value="México">México</option>
+          <option value="España">España</option>
+        </select>
+      </div>
+
+      <div class="grupo">
+        <label>Intereses:</label>
+        <label><input type="checkbox" name="intereses" value="Tecnología" /> Tecnología</label>
+        <label><input type="checkbox" name="intereses" value="Deportes" /> Deportes</label>
+        <label><input type="checkbox" name="intereses" value="Arte" /> Arte</label>
+        <label><input type="checkbox" name="intereses" value="Viajes" /> Viajes</label>
+      </div>
+
+      <button type="submit">Registrar</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

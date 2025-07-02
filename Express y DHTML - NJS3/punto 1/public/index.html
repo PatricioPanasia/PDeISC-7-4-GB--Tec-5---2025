@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editor en vivo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="titulo-principal">Editor en vivo</h1>
+
+    <!-- Elementos que se modifican -->
+    <h1 id="titulo">Hola DOM</h1>
+    <img id="imagen" src="images/ejemplo.jpg" alt="Imagen de ejemplo">
+
+    <!-- Panel de edición -->
+    <div class="editor">
+      <button onclick="agregarH1()">Agregar H1</button>
+
+      <input type="text" placeholder="Nuevo texto H1" oninput="cambiarTexto(this.value)">
+
+      <label class="color-label">
+        <span>Cambiar color</span>
+        <input type="color" onchange="cambiarColor(this.value)">
+      </label>
+
+      <input type="text" placeholder="URL imagen" oninput="agregarImagen(this.value)">
+
+      <input type="text" placeholder="Nuevo URL imagen" oninput="cambiarImagen(this.value)">
+
+      <input type="range" min="50" max="500" value="200" oninput="cambiarTamaño(this.value)"> px
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

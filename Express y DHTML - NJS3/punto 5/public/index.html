@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editor en vivo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="titulo-principal">Editor en vivo</h1>
+
+    <div class="editor">
+      <input type="text" id="inputH1" placeholder="Texto H1">
+      <button onclick="agregarH1()">Agregar H1</button>
+
+      <input type="text" id="inputP" placeholder="Texto del párrafo">
+      <button onclick="agregarParrafo()">Agregar Párrafo</button>
+
+      <input type="text" id="inputLista1" placeholder="Elemento 1 lista">
+      <input type="text" id="inputLista2" placeholder="Elemento 2 lista">
+      <input type="text" id="inputLista3" placeholder="Elemento 3 lista">
+      <button onclick="agregarLista()">Agregar Lista</button>
+
+      <input type="text" id="inputImg" placeholder="URL imagen">
+      <button onclick="agregarImagen()">Agregar Imagen</button>
+
+      <input type="text" id="inputHref" placeholder="URL enlace">
+      <input type="text" id="inputTextoEnlace" placeholder="Texto enlace">
+      <button onclick="agregarEnlace()">Agregar Enlace</button>
+    </div>
+
+    <div id="contenido-dinamico"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
