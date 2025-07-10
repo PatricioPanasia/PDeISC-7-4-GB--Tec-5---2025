@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoológico</title>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        async function mostrarDatos() {
+            const res = await fetch('/data');
+            const datos = await res.json();
+
+            const contenedor = document.getElementById('resultados');
+            contenedor.innerHTML = `
+                <h2>Total en Jaula 5 con peso < 3kg: ${datos.jaula5Menor3Kg}</h2>
+                <h2>Felinos en Jaulas 2 a 5: ${datos.felinosJaula2a5}</h2>
+                <h2>Animal en Jaula 4 con peso < 120kg: ${datos.animalJaula4Menor120}</h2>
+                <h2>Listado de Animales</h2>
+            `;
+
+            let tabla = `
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Jaula</th>
+                        <th>Tipo</th>
+                        <th>Peso</th>
+                    </tr>`;
+
+            for (let a of datos.zooAnimals) {
+                tabla += `
+                    <tr>
+                        <td>${a.IdAnimal}</td>
+                        <td>${a.nombre}</td>
+                        <td>${a.JaulaNumero}</td>
+                        <td>${a.IdTypeAnimal}</td>
+                        <td>${a.peso}</td>
+                    </tr>`;
+            }
+
+            tabla += `</table>`;
+            contenedor.innerHTML += tabla;
+        }
+
+        window.onload = mostrarDatos;
+    </script>
+</head>
+<body>
+    <h1>Registro de Animales del Zoológico</h1>
+
+    <form action="/add-animal" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required />
+
+        <label for="JaulaNumero">Número de Jaula:</label>
+        <input type="number" name="JaulaNumero" required />
+
+        <label for="IdTypeAnimal">Tipo de Animal:</label>
+        <select name="IdTypeAnimal">
+            <option value="1">Felino</option>
+            <option value="2">Ave</option>
+            <option value="3">Reptil</option>
+        </select>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" step="0.01" name="peso" required />
+
+        <button type="submit">Agregar Animal</button>
+    </form>
+
+    <div id="resultados"></div>
+</body>
+</html>
