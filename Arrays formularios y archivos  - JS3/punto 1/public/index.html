@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingreso de Números</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor-central">
+    <div class="contenedor-formulario">
+      <h1 class="estilo-titulo">Ingresá entre 10 y 20 números</h1>
+      <input type="number" id="numero" class="estilo-input-numero" placeholder="Ingresá un número">
+      <button class="estilo-boton-agregar" onclick="agregarNumero()">Agregar Número</button>
+      
+      <ul id="lista" class="estilo-lista-numeros"></ul>
+      
+      <button class="estilo-boton-guardar" onclick="guardarArchivo()">Guardar Archivo</button>
+      
+      <p id="error" class="estilo-error"></p>
+    </div>
+  </div>
+
+  <script>
+    const numeros = [];
+
+    function agregarNumero() {
+      const input = document.getElementById('numero');
+      const valor = input.value.trim();
+      const error = document.getElementById('error');
+      error.textContent = "";
+
+      if (!valor || isNaN(valor)) {
+        error.textContent = "Por favor ingresá un número válido.";
+        return;
+      }
+
+      if (numeros.length >= 20) {
+        error.textContent = "Ya ingresaste el máximo de 20 números.";
+        return;
+      }
+
+      numeros.push(Number(valor));
+      input.value = "";
+      input.focus();
+
+      const lista = document.getElementById('lista');
+      lista.innerHTML = "";
+      numeros.forEach((num, index) => {
+        const item = document.createElement('li');
+        item.textContent = num;
+        lista.appendChild(item);
+      });
+    }
+
+    function guardarArchivo() {
+      const error = document.getElementById('error');
+      error.textContent = "";
+
+      if (numeros.length < 10) {
+        error.textContent = "Necesitás al menos 10 números para guardar.";
+        return;
+      }
+
+      const contenido = numeros.join('\n');
+      const blob = new Blob([contenido], { type: 'text/plain' });
+      const enlace = document.createElement('a');
+      enlace.href = URL.createObjectURL(blob);
+      enlace.download = 'numeros.txt';
+      enlace.click();
+    }
+
+    // Agregar número al presionar ENTER
+    document.getElementById('numero').addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        agregarNumero();
+      }
+    });
+  </script>
+</body>
+</html>
