@@ -1,0 +1,117 @@
+/* Fuente global y reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f5f5;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,0.15), transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, rgba(139,92,246,0.12), transparent 60%),
+    linear-gradient(180deg, #0f1115 0%, #13151b 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+/* Contenedor principal */
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1300px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  margin: 0 auto;
+}
+
+/* Título */
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.userlist-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  overflow-x: auto;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.userlist-wrapper.open {
+  max-height: 1500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-table {
+  min-width: 700px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+  
+  .app-container {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .user-table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .userlist-wrapper {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+  
+  .app-container {
+    padding: 15px;
+  }
+  
+  .app-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+}
