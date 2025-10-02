@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaTeTi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/tateti.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>TaTeTi (Tres en Línea)</h1>
+
+    <div id="player-info" class="player-info-container">
+      <p><strong>Modo:</strong> Multijugador</p>
+      <p><strong>Jugador 1:</strong> valentina</p>
+      <p><strong>Jugador 2:</strong> pato</p>
+      <p id="turn-info">Turno de: valentina</p>
+    </div>
+
+    <div id="status">Preparado para jugar</div>
+
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <button id="reset-btn">Reiniciar Juego</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/tateti.js"></script>
+  <script src="/js/common.js"></script>
+
+</body>
+</html>

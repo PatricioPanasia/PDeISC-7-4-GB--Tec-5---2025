@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Almacén de Personas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor-principal">
+    <h1 class="titulo-principal">Formulario de Registro</h1>
+
+    <div class="formulario-contenedor">
+      <form id="formulario-persona">
+        <input class="campo-formulario" type="text" name="nombre" placeholder="Nombre" required />
+        <input class="campo-formulario" type="text" name="apellido" placeholder="Apellido" required />
+        <input class="campo-formulario" type="number" name="edad" placeholder="Edad" min="0" required />
+        <input class="campo-formulario" type="date" name="fechaNacimiento" required />
+        
+        <select class="campo-formulario" name="sexo" required>
+          <option value="">Sexo</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+
+        <input class="campo-formulario" type="text" name="documento" placeholder="Documento" required />
+        <input class="campo-formulario" type="text" name="estadoCivil" placeholder="Estado civil" required />
+        <input class="campo-formulario" type="text" name="nacionalidad" placeholder="Nacionalidad" required />
+        <input class="campo-formulario" type="tel" name="telefono" placeholder="Teléfono" pattern="[0-9]{10}" required />
+        <input class="campo-formulario" type="email" name="mail" placeholder="Mail" required />
+
+        <label>¿Tiene hijos?</label>
+        <select class="campo-formulario" name="tieneHijos" id="tieneHijos">
+          <option value="No">No</option>
+          <option value="Sí">Sí</option>
+        </select>
+        <input class="campo-formulario" type="number" name="cantidadHijos" id="cantidadHijos" placeholder="¿Cuántos?" min="1" style="display: none;" />
+
+        <button class="boton-enviar" type="submit">Guardar</button>
+      </form>
+    </div>
+
+    <div id="mensaje" class="mensaje-sistema"></div>
+    
+    <h1 class="titulo-principal">Personas registradas:</h1>
+    <ul id="lista-personas" class="lista-personas"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

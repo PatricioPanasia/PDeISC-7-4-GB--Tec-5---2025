@@ -1,0 +1,73 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Imagen como fondo que ocupa la mitad de la pantalla */
+.header-image {
+    background-image: url('vartitle.png'); /* Aquí colocas la dirección de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 65vh;  
+    position: relative;
+}
+
+/* Estilos para los títulos grandes */
+.titulo-principal {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Subtítulo */
+.subtitulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Texto principal más grande */
+.contenido-texto {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/* Estilos para la columna izquierda (Datos curiosos) */
+.col-2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Espacios reservados para imágenes */
+.image-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #6c757d; /* Color gris de Bootstrap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Sección de contenido */
+.content {
+    background-color: #f8f9fa; 
+    padding: 30px;
+}
+
+/* Header flotante */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; 
+}
+
+/* Asegurar que el contenido no se superponga al header */
+.content {
+    padding-top: 80px;
+}

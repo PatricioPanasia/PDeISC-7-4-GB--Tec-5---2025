@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Clásicos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .game-card h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .game-card p {
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">Juegos Clásicos</h1>
+        <div class="games-grid">
+            <div class="game-card" onclick="selectGameMode('simon')">
+                <h2>Simón Dice</h2>
+                <p>Juego de memoria con colores</p>
+            </div>
+            <div class="game-card" onclick="selectGameMode('tateti')">
+                <h2>TaTeTi</h2>
+                <p>Tres en línea</p>
+            </div>
+            <div class="game-card" onclick="selectGameMode('ppt')">
+                <h2>Piedra, Papel o Tijeras</h2>
+                <p>El clásico juego de manos</p>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>

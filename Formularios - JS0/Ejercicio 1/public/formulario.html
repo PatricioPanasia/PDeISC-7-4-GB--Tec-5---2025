@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body class="formulario-container">
+  <h1 class="formulario-title">Iniciar Sesión</h1>
+  <p class="formulario-parrafo">Inicia sesión</p>
+
+  <form class="formulario-form">
+    <label class="formulario-label" for="usuario">Usuario:</label>
+    <input class="formulario-input-usuario" type="text" id="usuario" name="usuario" required />
+
+    <label class="formulario-label" for="contrasena">Contraseña:</label>
+    <input class="formulario-input-contrasena" type="password" id="contrasena" name="contrasena" required />
+
+    <button class="formulario-btn-ingresar" type="submit">Ingresar</button>
+  </form>
+
+  <button class="formulario-btn-volver" onclick="irAPagina('/')">Volver</button>
+</body>
+</html>

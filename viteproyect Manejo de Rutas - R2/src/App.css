@@ -1,0 +1,192 @@
+/* Fuente y colores oscuros */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;   /* 🔥 fija */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  flex-wrap: nowrap;  /* 🔥 nunca se va para abajo */
+  overflow-x: auto;   /* 🔥 si no entra, aparece scroll horizontal */
+}
+
+nav .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  white-space: nowrap;
+}
+
+nav .links {
+  display: flex;
+  gap: 20px;
+}
+
+nav .links a {
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+nav .links a:hover {
+  color: #ffffff;
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 100px 20px; /* 🔥 espacio para que no tape el contenido */
+}
+
+/* Contenedores */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Tarjetas */
+.task-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.task-card:hover {
+  transform: scale(1.03);
+}
+
+.task-card.done {
+  border-left: 5px solid #4caf50;
+  opacity: 0.8;
+}
+
+.task-card h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.task-card p {
+  color: #aaa;
+  margin: 5px 0;
+}
+
+/* Acciones de tarea */
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* 🔥 permite que pasen de línea */
+}
+
+.task-actions button,
+.task-actions a {
+  flex: 0 0 auto; /* 🔥 evita que ocupen 100% al romper línea */
+}
+
+/* Link estilo botón (detalle) */
+.detail-link {
+  background: #2196f3;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.detail-link:hover {
+  background: #1e88e5;
+}
+
+/* Formulario */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.task-form button {
+  background: #673ab7;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #5e35b1;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fecha {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* 🔹 Botones alineados a la derecha */
+.button-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+/* Mensaje de error */
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

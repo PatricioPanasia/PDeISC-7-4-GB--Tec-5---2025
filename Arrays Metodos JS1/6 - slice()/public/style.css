@@ -1,0 +1,177 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Variables reutilizables - MODIFICADO COLOR PRIMARIO A GRIS OSCURO */
+:root {
+  --color-primario: #2d2d2d; /* Gris oscuro en lugar de negro */
+  --color-secundario: #ffffff;
+  --color-borde: #555555; /* Ajustado para mejor contraste con el nuevo fondo */
+  --color-fondo-input: #f0f0f0;
+  --radio-borde: 8px;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transicion: all 0.3s ease;
+}
+
+/* Estilos base */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: var(--color-secundario);
+}
+
+/* Contenedor del formulario */
+.contenedor-formulario {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Formulario - AHORA CON FONDO GRIS OSCURO */
+.formulario {
+  background-color: var(--color-primario);
+  padding: 30px;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra);
+}
+
+/* Título principal */
+.titulo-formulario {
+  font-size: 2.2em;
+  color: var(--color-secundario);
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Etiquetas */
+.etiqueta-formulario {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: var(--color-secundario);
+  font-weight: 500;
+}
+
+/* Subtítulos (Datos Registrados y mensajes) */
+.subtitulo-formulario {
+  font-size: 1.3em;
+  margin: 25px 0 15px 0;
+  color: var(--color-secundario);
+  font-weight: 500;
+}
+
+/* Campos de entrada */
+.input-formulario {
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background-color: var(--color-fondo-input);
+  margin-bottom: 20px;
+  transition: var(--transicion);
+  box-sizing: border-box;
+}
+
+.input-formulario:focus {
+  outline: none;
+  border-color: #777; /* Ajustado para nuevo fondo */
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(120, 120, 120, 0.2); /* Ajustado para nuevo fondo */
+}
+
+/* Botón */
+.boton-formulario {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: var(--radio-borde);
+  cursor: pointer;
+  transition: var(--transicion);
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.boton-formulario:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.boton-formulario:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mensajes */
+.mensaje-formulario {
+  font-size: 1em;
+  margin: 0 0 15px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Lista de items */
+.lista-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.item-lista {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: var(--radio-borde);
+  color: var(--color-secundario);
+  border-left: 4px solid #4CAF50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titulo-formulario {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .formulario {
+    padding: 20px;
+  }
+  
+  .input-formulario {
+    padding: 12px;
+  }
+  
+  .boton-formulario {
+    padding: 12px 20px;
+    width: 100%;
+  }
+  
+  .subtitulo-formulario {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .titulo-formulario {
+    font-size: 1.5em;
+  }
+  
+  .etiqueta-formulario {
+    font-size: 1em;
+  }
+  
+  .subtitulo-formulario {
+    font-size: 1.1em;
+  }
+}

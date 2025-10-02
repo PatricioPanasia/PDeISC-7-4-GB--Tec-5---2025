@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simón Dice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/simon.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>Simón Dice</h1>
+    
+    <div id="player-info" class="player-info-container">
+      <p><strong>Modo:</strong> Multijugador</p>
+      <p><strong>Jugador 1:</strong> valentina</p>
+      <p><strong>Jugador 2:</strong> pato</p>
+      <p id="turn-info">Turno de: valentina</p>
+    </div>
+
+    <div class="simon-board">
+      <button class="color-btn" id="green" data-color="green"></button>
+      <button class="color-btn" id="red" data-color="red"></button>
+      <button class="color-btn" id="yellow" data-color="yellow"></button>
+      <button class="color-btn" id="blue" data-color="blue"></button>
+    </div>
+
+    <div class="controls">
+      <button id="start-btn">Comenzar Juego</button>
+      <div id="score">Puntuación: 0</div>
+      <div id="level">Nivel: 1</div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/simon.js"></script>
+  <script src="/js/common.js"></script>
+
+</body>
+</html>

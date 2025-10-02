@@ -1,0 +1,81 @@
+/* Fondo general oscuro con tipografía clara */
+body {
+  background-color: #111;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Descripción */
+p.descripcion-index {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Contenedor principal */
+.contenedor-index {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05); /* Efecto suave */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* Botones de selección de juego */
+.boton-index {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  max-width: 250px;
+}
+
+.boton-index:hover {
+  background-color: #444;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .descripcion-index {
+    font-size: 1rem;
+  }
+
+  .boton-index {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .contenedor-index {
+    padding: 1.5rem;
+  }
+}

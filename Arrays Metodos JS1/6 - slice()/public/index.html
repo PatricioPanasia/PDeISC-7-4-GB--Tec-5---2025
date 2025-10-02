@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con Arrays y unshift()</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="contenedor-formulario">
+    <form class="formulario" id="formulario">
+      <h1 class="titulo-formulario">Formulario con slice()</h1>
+      
+      <label class="etiqueta-formulario" id="etiquetaInput">Ingrese un color:</label>
+      <input class="input-formulario" type="text" id="entrada" required />
+      
+      <div id="opciones" class="opciones-formulario" style="display: none;">
+        <label class="etiqueta-formulario">Tipo de tarea:</label>
+        <select class="select-formulario" id="tipoTarea">
+          <option value="normal">Tarea normal</option>
+          <option value="urgente">Tarea urgente</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="boton-formulario" id="boton">Guardar color</button>
+      <p class="mensaje-formulario" id="mensaje"></p>
+
+      <h2 class="subtitulo-formulario">Datos Registrados:</h2>
+      <ul class="lista-items" id="lista"></ul>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

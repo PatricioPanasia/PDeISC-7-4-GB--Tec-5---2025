@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Título principal */
+#titulo-principal {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Imagen de ejemplo */
+#imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+/* Contenedor del editor */
+.editor {
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Botón */
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #00a86b;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007e55;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="range"],
+input[type="color"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input[type="color"] {
+  padding: 0;
+  height: 50px;
+  border: none;
+}
+
+/* Selector de color alineado */
+.color-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.color-label input[type="color"] {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .editor {
+    padding: 1rem;
+  }
+
+  #titulo-principal {
+    font-size: 1.5rem;
+  }
+}

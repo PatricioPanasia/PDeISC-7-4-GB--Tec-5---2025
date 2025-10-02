@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | Var Noticias</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="encabezado-principal">
+    <div class="encabezado-logo">
+      <h1 class="titulo-sitio">Var Noticias</h1>
+    </div>
+    <nav class="menu-navegacion">
+      <ul class="lista-navegacion">
+        <li><a href="index.html" class="enlace-navegacion">Inicio</a></li>
+        <li><a href="politica.html" class="enlace-navegacion">Política</a></li>
+        <li><a href="deportes.html" class="enlace-navegacion">Deportes</a></li>
+        <li><a href="internacional.html" class="enlace-navegacion">Internacional</a></li>
+        <li><a href="contacto.html" class="enlace-navegacion">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenido-principal">
+    <section class="bloque-formulario-contacto">
+      <h2 class="titulo-formulario-contacto">Contacto</h2>
+      <p class="descripcion-formulario-contacto">
+        Si tenés dudas, comentarios o sugerencias, completá el siguiente formulario y nos pondremos en contacto con vos.
+      </p>
+      <form class="formulario-contacto">
+        <label for="nombre" class="etiqueta-formulario">Nombre completo:</label>
+        <input type="text" id="nombre" class="campo-formulario" required />
+
+        <label for="email" class="etiqueta-formulario">Correo electrónico:</label>
+        <input type="email" id="email" class="campo-formulario" required />
+
+        <label for="mensaje" class="etiqueta-formulario">Mensaje:</label>
+        <textarea id="mensaje" class="campo-formulario" rows="5" required></textarea>
+
+        <button type="submit" class="boton-enviar-formulario">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <p class="texto-pie">© 2025 Var Noticias. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

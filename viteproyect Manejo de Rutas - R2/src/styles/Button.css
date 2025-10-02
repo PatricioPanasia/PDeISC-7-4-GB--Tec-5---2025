@@ -1,0 +1,26 @@
+/* Base */
+.btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  background: #666;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: translateY(1px); }
+
+/* Ancho completo opcional */
+.btn.full { width: 100%; display: block; }
+
+/* Variantes */
+.btn.success { background: #4caf50; }  /* verde */
+.btn.success:hover { background: #45a049; }
+
+.btn.info { background: #2196f3; }     /* azul */
+.btn.info:hover { background: #1e88e5; }
+
+.btn.danger { background: #f44336; }   /* rojo */
+.btn.danger:hover { background: #d32f2f; }
